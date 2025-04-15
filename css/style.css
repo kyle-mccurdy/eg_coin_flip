@@ -19,9 +19,7 @@ section span {
   min-width: 50px;
   text-decoration: underline;
 }
-#heads {
-  background-color: red;
-}
+
 hr {
   height: 2px;
   color: black;
