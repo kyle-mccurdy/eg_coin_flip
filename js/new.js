@@ -1,24 +1,47 @@
-let;
-let;
-let;
-function runGame(param) {
-    let someVariable = param;
-    let;
-    let;
-    if (something == 1) {       
-        'do stuff here';         
-      } else {                    
-        'do other stuff';         
-      };                          
-    
-      let;
-      if (this === that) {    
-        'do stuff here';      
-        'do more stuff';      
-      } else {                
-        'do another stuff';   
-        'and do more'         
-      };
-      'total of games played'++;
-      let lorem = document.getElementById('ipsum');
-      lorem.innerText = choiceName;}
+function flipCoin(x) {
+
+    let guess = x;
+
+    let playerGuess = document.getElementById('guess');
+    let flip = document.getElementById('flip');
+    let result = document.getElementById('result');
+
+    let rand = Math.floor(Math.random() * 2);
+
+    flip.innerText = rand;
+
+    if (guess === 0) {
+        playerGuess.innerText = "Heads";
+    } else {
+        playerGuess.innerText = "Tails";
+    }
+
+    if (rand === 0) {
+        flip.innerText = "Heads";
+    } else {
+        flip.innerText = "Tails";
+    }
+
+    if (guess === rand) {
+        result.innerText = "win!";
+    } else {
+        result.innerText = "lose!";
+    }
+
+    function resetScore() {
+        gamesPlayed = 0;
+        gamesWon = 0;
+        gamesLost = 0;
+        
+        let gameCount = document.getElementById('count');
+        
+        let winCount = document.getElementById('wins');
+        
+        let lossCount = document.getElementById('losses');
+        
+        gameCount.innerText = gamesPlayed;
+        
+        winCount.innerText = gamesWon;
+        
+        lossCount.innerText = gamesLost;}
+}
