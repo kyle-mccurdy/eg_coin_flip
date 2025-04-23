@@ -8,7 +8,7 @@ function flipCoin(x) {
 
     let rand = Math.floor(Math.random() * 2);
 
-    flip.innerText = rand;
+
 
     if (guess === 0) {
         playerGuess.innerText = "Heads";
