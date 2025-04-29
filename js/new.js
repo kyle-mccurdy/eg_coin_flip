@@ -1,3 +1,7 @@
+    let gamesPlayed = 0;
+    let gamesWon = 0;
+    let gamesLost = 0;
+
 function flipCoin(x) {
 
     let guess = x;
@@ -7,8 +11,6 @@ function flipCoin(x) {
     let result = document.getElementById('result');
 
     let rand = Math.floor(Math.random() * 2);
-
-
 
     if (guess === 0) {
         playerGuess.innerText = "Heads";
@@ -28,7 +30,15 @@ function flipCoin(x) {
         result.innerText = "lose!";
     }
 
-    function resetScore() {
+    let gameCount = document.getElementById('count');
+    gameCount.innerText = gamesPlayed;
+    let winCount = document.getElementById('wins');
+    winCount.innerText = gamesWon;
+    let lossCount = document.getElementById('losses');
+    lossCount.innerText = gamesLost;
+}
+
+function resetScore() {
         gamesPlayed = 0;
         gamesWon = 0;
         gamesLost = 0;
@@ -44,4 +54,3 @@ function flipCoin(x) {
         winCount.innerText = gamesWon;
         
         lossCount.innerText = gamesLost;}
-}
