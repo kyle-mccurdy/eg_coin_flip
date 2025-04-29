@@ -26,8 +26,12 @@ function flipCoin(x) {
 
     if (guess === rand) {
         result.innerText = "win!";
+        gamesWon++;
+        gamesPlayed++;
     } else {
         result.innerText = "lose!";
+        gamesLost++;
+        gamesPlayed++;
     }
 
     let gameCount = document.getElementById('count');
